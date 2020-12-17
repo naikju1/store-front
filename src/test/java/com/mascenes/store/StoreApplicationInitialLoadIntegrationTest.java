@@ -1,17 +1,22 @@
+/*
 package com.mascenes.store;
 
 import com.mascenes.store.repository.ProductsRepo;
 import com.mascenes.store.repository.UsersRepo;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.jdbc.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
-class StoreApplicationTests {
+@SqlGroup({
+        @Sql(scripts = "/schema-mysql.sql",
+                config = @SqlConfig(transactionMode = SqlConfig.TransactionMode.ISOLATED)),
+        @Sql("/data-mysql.sql")})
+public class StoreApplicationInitialLoadIntegrationTest {
+
     @Autowired
-    private UsersRepo users;
+     private UsersRepo users;
     @Autowired
     private ProductsRepo product;
 
@@ -26,4 +31,4 @@ class StoreApplicationTests {
         assertEquals(12,product.findAll().size());
     }
 
-}
+*/

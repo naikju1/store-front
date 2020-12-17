@@ -5,9 +5,12 @@ import org.springframework.stereotype.Repository;
 
 import com.mascenes.store.model.Users;
 
+import java.util.List;
+
 @Repository
 public interface UsersRepo extends JpaRepository<Users, Long> {
-    Users findById(long id);
+    @Override
+    List<Users> findAll();
 
     Users findByUserName(String userName);
 }

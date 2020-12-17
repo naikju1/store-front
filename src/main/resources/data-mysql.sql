@@ -1,9 +1,9 @@
-INSERT INTO `Users` (`userName`, `password`, `role`) VALUES
+INSERT INTO Users (userName, password, role) VALUES
 ('admin', 'admin', 'A'),
 ('store', 'store', 'S'),
 ('sales', 'sales', 'S');
 
-INSERT INTO `Product` (`title`,`color`,`barCodeNumber`,`size`,`stock`,`price`, `description`) VALUES
+INSERT INTO `Products` (`title`,`color`,`barCodeNumber`,`size`,`stock`,`price`, `description`) VALUES
 ('Silk Shirt','White','swsk123','s',120,50.75,'white shirt'),
 ('Silk Shirt','White','mwsk123','m',120,50.75,'white shirt'),
 ('Silk Shirt','White','lwsk123','l',120,50.75,'white shirt'),

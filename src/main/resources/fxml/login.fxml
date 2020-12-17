@@ -12,7 +12,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mascenes.store.controller.LoginController">
     <left>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="300.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
                 <ImageView fitHeight="150.0" fitWidth="260.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -33,7 +33,7 @@
         </AnchorPane>
     </left>
     <right>
-        <AnchorPane prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="85.0" layoutY="120.0" text="Username" />
                 <TextField fx:id="usernametxt" layoutX="172.0" layoutY="116.0" />

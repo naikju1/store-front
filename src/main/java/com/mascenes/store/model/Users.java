@@ -1,5 +1,7 @@
 package com.mascenes.store.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +16,7 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true, nullable = false)
     private String userName;
     private String password;
     private char role;
@@ -42,7 +45,9 @@ public class Users {
     public void setPassword(String Password) {
         this.password = Password;
     }
-
+    public  String getPassword(){
+        return password;
+    }
     public void setRole(char Role) {
         this.role = Role;
     }

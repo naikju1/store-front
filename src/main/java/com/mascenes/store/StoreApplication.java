@@ -1,4 +1,5 @@
 package com.mascenes.store;
+import com.mascenes.store.view.FxmlView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,7 +18,7 @@ public class StoreApplication extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(rootNode, 500, 500));
+        stage.setScene(new Scene(rootNode, 600, 500));
         stage.setTitle("Ma Scenes inc.");
         stage.setMinWidth(500);
         stage.setMinHeight(500);
@@ -25,7 +26,8 @@ public class StoreApplication extends Application {
     }
     public void init() throws  Exception{
         springContext = SpringApplication.run(StoreApplication.class);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(FxmlView.LOGIN.getFxmlFile()));
         fxmlLoader.setControllerFactory(springContext::getBean);
         rootNode = fxmlLoader.load();
     }
